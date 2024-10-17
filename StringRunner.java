@@ -6,15 +6,9 @@ import com.zoho.invalidinputexception.*;
 
 public class StringRunner{
 public static void main(String[] args){
-	System.out.println("=== Retrieve a string from command line arguments ===");
-	if(args.length>0){
-		System.out.println("You entered : "+ args[0]);
-		}
-	else{
-		System.out.println("No input was provided\n");
-		}
+	
 	System.out.println("=========== String Tasks =============");
-	System.out.print("1.Length of the String\n2.Convert String into char array\n3.Displaying a character of a string\n4.No. of occurence of character\n5.Greatest position of a character\n6.Displaying last Few characters of a string\n7.Displaying first few characters of a string\n8.Replacing characters in a string\n9.check whether the string starts with the original string \n10.check whether the string ends with the original string\n11.UPPERCASE\n12.lowercase\n13.Reverse a string\n14.Multiple words in a single line\n15.Convert a string into string array using a seperator\n16.Comparing strings\n17.Removing extra spaces in the beginning and the end\n18.Merging strings with a character in between\n19.Exit\n");
+	System.out.print("1.Length of the String\n2.Convert String into char array\n3.Displaying a character of a string\n4.No. of occurence of character\n5.Greatest position of a character\n6.Displaying last Few characters of a string\n7.Displaying first few characters of a string\n8.Replacing characters in a string\n9.check whether the string starts with the original string \n10.check whether the string ends with the original string\n11.UPPERCASE\n12.lowercase\n13.Reverse a string\n14.Multiple words in a single line\n15.Convert a string into string array using a seperator\n16.Comparing strings\n17.Removing extra spaces in the beginning and the end\n18.Merging strings with a character in between\n19.Retrieve a String from command line arguments\n20.Exit\n");
 	System.out.println("======================================");
 	boolean exit;
 	int selectOperation;
@@ -24,7 +18,7 @@ public static void main(String[] args){
 	do{
 	exit = true;
 	selectOperation=getValidIntegerInput(scanner,"Select an operation : ");
-	if(0<selectOperation&&selectOperation<20){
+	if(0<selectOperation&&selectOperation<21){
 		exit = false;
 		}
 	else{
@@ -183,6 +177,15 @@ public static void main(String[] args){
 	System.out.println("Merged Strings with a character inbetween : "+ word.toMergeStrings(multipleStrings,mergingChar));
 	break;
 	}
+	case 19:{
+	System.out.println("=== Retrieve a string from command line arguments ===");
+	if(args.length>0){
+		System.out.println("You entered : "+ args[0]);
+		}
+	else{
+		System.out.println("No input was provided\n");
+		}
+		}
 	default:{
 		System.out.println("==== Exit ====");
 	}
